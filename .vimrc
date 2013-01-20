@@ -38,6 +38,8 @@ set wildmenu
 
 
 " Search
+Bundle 'kien/ctrlp.vim'
+
 set ignorecase
 set smartcase
 set incsearch
