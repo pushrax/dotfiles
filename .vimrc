@@ -55,3 +55,6 @@ set sw=4
 set noexpandtab
 set shiftround
 
+filetype plugin on
+filetype indent off
+
