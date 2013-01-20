@@ -1,7 +1,7 @@
 ZSH="$HOME/.zsh/oh-my-zsh"
 ZSH_CUSTOM="$HOME/.zsh"
 
-ZSH_THEME="blinks"
+ZSH_THEME="j1i"
 plugins=(git ruby)
 
 source "$ZSH/oh-my-zsh.sh"
