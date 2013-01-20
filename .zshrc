@@ -14,3 +14,5 @@ then
 	source "$HOME/.zsh-env"
 fi
 
+export PATH="$HOME/bin:$PATH"
+

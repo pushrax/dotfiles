@@ -24,6 +24,10 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 
 
+" Tools
+Bundle 'tpope/vim-fugitive'
+
+
 " Display
 set list listchars=tab:\ \ ,trail:·
 set number
