@@ -9,8 +9,8 @@ source "$ZSH/oh-my-zsh.sh"
 export EDITOR=vim
 setopt nocorrectall
 
-if [ -r "$HOME/.zsh-profile" ]
+if [ -r "$HOME/.zsh-env" ]
 then
-	source "$HOME/.zsh-profile"
+	source "$HOME/.zsh-env"
 fi
 
