@@ -1,6 +1,6 @@
 set nocompatible
+syntax on
 filetype off
-syntax enable
 
 
 " Vundle
@@ -55,6 +55,8 @@ set sw=4
 set noexpandtab
 set shiftround
 
+
+" These need to come after all Bundle imports
 filetype plugin on
-filetype indent off
+filetype plugin indent on
 
