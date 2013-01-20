@@ -32,6 +32,7 @@ Bundle 'tpope/vim-fugitive'
 set list listchars=tab:\ \ ,trail:·
 set number
 set ruler
+set cursorline
 
 set splitright
 set splitbelow
