@@ -61,6 +61,10 @@ set noexpandtab
 set shiftround
 
 
+" Misc fixes
+let g:netrw_home=$HOME.'/.vim'
+
+
 " These need to come after all Bundle imports
 filetype plugin on
 filetype plugin indent on

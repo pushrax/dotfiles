@@ -1,3 +1,5 @@
 .vim/bundle/*
 !.vim/bundle/vundle
 
+.vim/.netrwhist
+
