@@ -39,6 +39,8 @@ set wildmenu
 
 " Search
 Bundle 'kien/ctrlp.vim'
+let g:ctrlp_clear_cache_on_exit = 1
+set wildignore+=*.o,.git,*.jpg,*.png,*.swp,*.d,*.gif,*.pyc,node_modules,*.class,*.crf,*.hg,*.orig,.meteor,*.acn,*.acr,*.alg,*.aux,*.bbl,*.blg,*.dvi,*.fdb_latexmk,*.glg,*.glo,*.gls,*.idx,*.ilg,*.ind,*.ist,*.lof,*.log,*.lot,*.maf,*.mtc,*.mtc0,*.nav,*.nlo,*.out,*.pdfsync,*.ps,*.snm,*.synctex.gz,*.toc,*.vrb,*.xdy,*.pdf,*.bcf,*.run.xml
 
 set ignorecase
 set smartcase
@@ -51,6 +53,7 @@ set tabstop=4
 set softtabstop=4
 set sw=4
 set expandtab
+set shiftround
 
 
 " Manual filetype stuff
