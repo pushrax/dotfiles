@@ -10,11 +10,10 @@ Bundle 'gmarik/vundle'
 
 
 " Colours
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'chriskempson/base16-vim'
 set t_Co=16
 set background=dark
-colorscheme solarized
-
+colorscheme base16-default
 
 " Syntax highlighting
 Bundle 'digitaltoad/vim-jade'
