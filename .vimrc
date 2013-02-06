@@ -45,6 +45,10 @@ set wildmenu
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_clear_cache_on_exit = 1
 set wildignore+=*.o,.git,*.jpg,*.png,*.swp,*.d,*.gif,*.pyc,node_modules,*.class,*.crf,*.hg,*.orig,.meteor,*.acn,*.acr,*.alg,*.aux,*.bbl,*.blg,*.dvi,*.fdb_latexmk,*.glg,*.glo,*.gls,*.idx,*.ilg,*.ind,*.ist,*.lof,*.log,*.lot,*.maf,*.mtc,*.mtc0,*.nav,*.nlo,*.out,*.pdfsync,*.ps,*.snm,*.synctex.gz,*.toc,*.vrb,*.xdy,*.pdf,*.bcf,*.run.xml
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
 
 set ignorecase
 set smartcase
@@ -62,6 +66,7 @@ set shiftround
 
 " Misc fixes
 let g:netrw_home=$HOME.'/.vim'
+set backspace=2
 
 
 " These need to come after all Bundle imports
