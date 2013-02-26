@@ -4,6 +4,8 @@ ZSH_CUSTOM="$HOME/.zsh"
 ZSH_THEME="j1i"
 plugins=(git ruby)
 
+export DISABLE_AUTO_UPDATE="true"
+
 source "$ZSH/oh-my-zsh.sh"
 
 export EDITOR=vim
