@@ -25,6 +25,7 @@ Bundle 'groenewege/vim-less'
 
 " Tools
 Bundle 'tpope/vim-fugitive'
+Bundle 'jamessan/vim-gnupg'
 
 
 " Display
