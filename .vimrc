@@ -46,9 +46,10 @@ set wildmenu
 " Search
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_switch_buffer = 'Et'
 set wildignore+=*.o,.git,*.jpg,*.png,*.swp,*.d,*.gif,*.pyc,node_modules,*.class,*.crf,*.hg,*.orig,.meteor,*.acn,*.acr,*.alg,*.aux,*.bbl,*.blg,*.dvi,*.fdb_latexmk,*.glg,*.glo,*.gls,*.idx,*.ilg,*.ind,*.ist,*.lof,*.log,*.lot,*.maf,*.mtc,*.mtc0,*.nav,*.nlo,*.out,*.pdfsync,*.ps,*.snm,*.synctex.gz,*.toc,*.vrb,*.xdy,*.pdf,*.bcf,*.run.xml
 let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("e")': ['<c-t>'],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
   \ }
 
