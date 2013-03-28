@@ -1,0 +1,1 @@
+../../kantan/output/kantan.vim

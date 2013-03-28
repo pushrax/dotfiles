@@ -2,6 +2,7 @@ set nocompatible
 syntax on
 filetype off
 
+set fileencodings=ucs-bom,utf-8,cp932,cp936,big5,euc-jp,euc-kr,gb18030,latin1,default
 
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -10,10 +11,10 @@ Bundle 'gmarik/vundle'
 
 
 " Colours
-Bundle 'chriskempson/base16-vim'
 set t_Co=16
 set background=dark
-colorscheme base16-default
+colorscheme kantan
+
 
 " Syntax highlighting
 Bundle 'digitaltoad/vim-jade'

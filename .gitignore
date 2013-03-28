@@ -3,3 +3,5 @@
 
 .vim/.netrwhist
 
+.mpd
+.ncmpcpp/error.log

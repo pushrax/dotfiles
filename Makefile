@@ -1,6 +1,17 @@
-all: submodules link
+all: submodules kantan-build Xresources link
 
-link: .zsh .zshrc .vim .vimrc .gitconfig .gitignore_global .inputrc .Xresources .tmux.conf
+kantan-build:
+	cd kantan; ./kantan schemes/default
+
+Xresources:
+	cat .Xresources > ~/.Xresources
+	cat kantan/output/Xresources >> ~/.Xresources
+
+.mpd:
+	mkdir -p .mpd/playlists
+	touch .mpd/mpd.{db,log,pid,state}
+
+link: .zsh .zshrc .vim .vimrc .gitconfig .gitignore_global .inputrc .tmux.conf .mpd .mpdconf .xbindkeysrc .xinitrc .ncmpcpp
 	$(foreach file, $^, ln -s $(CURDIR)/$(file) ~; )
 
 submodules:
