@@ -15,13 +15,8 @@ setopt nocorrectall
 
 export PATH="$HOME/bin:$PATH"
 
-function command_exists() {
-	hash "$1" &> /dev/null
-}
-
-
 ID_RSA="$HOME/.ssh/id_rsa"
-if [ -r "$ID_RSA" ]; then
+if [ -r "$ID_RSA" ] && (( $+commands[keychain] )); then
 	eval `keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa`
 fi
 
