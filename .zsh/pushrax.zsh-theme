@@ -1,6 +1,6 @@
 # https://github.com/pushrax zsh theme, based on https://github.com/blinks original
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" [%{%B%F{white}%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" [%{%b%F{white}%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{%f%k%b%K{${bkg}}%B%F{black}%}]"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
