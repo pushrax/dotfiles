@@ -75,8 +75,8 @@ key_pause = 'c'
 #key_artist_info = 'I'
 #key_lyrics = 'l'
 #key_reverse_selection = 'v'
-#key_deselect_all = 'V'
-#key_select_album = 'B'
+key_deselect_all = 'V'
+key_select_album = 1 # c-a
 key_add_selected_items = 'a'
 key_add = 0
 #
