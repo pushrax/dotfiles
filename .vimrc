@@ -30,7 +30,7 @@ Bundle 'jamessan/vim-gnupg'
 
 
 " Display
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:▸\ ,trail:·
 set number
 set ruler
 set cursorline
@@ -41,6 +41,20 @@ set title
 set titleold=
 
 set wildmenu
+
+
+" Statusline
+set laststatus=2
+
+set statusline=
+set statusline+=[%n]\ %*                        " buffer
+set statusline+=%<%F%*\                         " file path
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}/ " encoding
+set statusline+=%{&ff}]                         " file format
+set statusline+=%m%*                            " modified
+set statusline+=%=%5l%*/%L%*                    " current/total lines
+set statusline+=%4v\ %*                         " current column
+set statusline+=0x%04B\ %*                      " selected character code
 
 
 " Search
