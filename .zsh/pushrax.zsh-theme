@@ -9,5 +9,3 @@ PROMPT='%{%f%k%b%}
 %{%b%F{white}%K{${bkg}}%}%n@%{%B%F{white}%}%m %{%B%F{yellow}%K{${bkg}}%}%~%{%B%F{black}%}$(git_prompt_info)%E%{%f%k%b%}
 %{%B%F{red}%}∙%{%f%k%b%} '
 
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
