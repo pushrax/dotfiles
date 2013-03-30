@@ -4,7 +4,7 @@ ZSH="$HOME/.zsh/oh-my-zsh"
 ZSH_CUSTOM="$HOME/.zsh"
 
 ZSH_THEME="pushrax"
-plugins=(git ruby node github brew nyan)
+plugins=(git ruby node brew nyan)
 
 export DISABLE_AUTO_UPDATE="true"
 
