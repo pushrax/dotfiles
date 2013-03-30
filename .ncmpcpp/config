@@ -92,7 +92,7 @@ mpd_connection_timeout = "5"
 ##
 #
 alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b"
-alternative_header_second_line_format = "{{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}"
+alternative_header_second_line_format = "{{$4$b%a$/b$9}{ - $5%b$9}{ $b($4%y$9)}}|{%D}$b"
 #
 ##
 ## Note: Below variables also supports

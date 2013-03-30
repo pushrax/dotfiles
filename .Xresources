@@ -1,4 +1,4 @@
-XTerm*faceName:	DejaVuSansMono:pixelsize=12
+XTerm*faceName: Meslo LG S:pixelsize=12
 XTerm*faceNameDoublesize: IPAGothic:pixelsize=12
 XTerm*selectToClipboard: true
 XTerm*utf8: 1
