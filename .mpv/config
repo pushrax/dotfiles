@@ -4,4 +4,5 @@ slang=eng
 ao=jack
 volume=100
 softvol=no
+screenshot-format=png
 
