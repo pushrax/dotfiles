@@ -30,7 +30,11 @@ Bundle 'jamessan/vim-gnupg'
 
 
 " Display
-set list listchars=tab:▸\ ,trail:·
+if version < 700
+	set list listchars=tab:>\ ,trail:-
+else
+	set list listchars=tab:▸\ ,trail:·
+endif
 set number
 set ruler
 set cursorline
