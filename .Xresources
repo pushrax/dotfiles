@@ -5,6 +5,7 @@ XTerm*utf8: 1
 XTerm*utf8Title: 1
 XTerm*inputMethod: ibus
 XTerm*disallowedWindowOps:20,21,SetXprop
+XTerm*bellIsUrgent: true
 
 *VT100*eightBitInput: false
 *VT100*eightBitControl: false
