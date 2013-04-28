@@ -12,6 +12,7 @@ state_file "~/.mpd/mpd.state"
 #user "mpd"
 #group				"nogroup"
 bind_to_address	"127.0.0.1"
+bind_to_address	"192.168.1.100"
 #bind_to_address "~/.mpd/socket"
 port "6600"
 log_level "default"
@@ -52,31 +53,31 @@ audio_output {
 ##	mixer_index	"0"		# optional
 #}
 
-#audio_output {
-#	type		"shout"
-#	encoding	"ogg"
-#	name		"mpd stream"
-#	host		"localhost"
-#	port		"8000"
-#	mount		"/mpd.ogg"
-#	password	"hackme"
-#	quality		"9.0"
-#	format		"44100:16:1"
-#	protocol	"icecast2"
-#	user		"jli"
-#	public		"no"
-#}
-
 audio_output {
-	type		"httpd"
-	name		"HTTP Stream"
-	encoder		"vorbis"
+	type		"shout"
+	encoding	"ogg"
+	name		"mpd stream"
+	host		"localhost"
 	port		"8000"
-	bind_to_address	"0.0.0.0"
+	mount		"/mpd.ogg"
+	password	"password"
 	quality		"9.0"
-	format		"44100:16:1"
-	max_clients	"0"
+	format		"44100:16:2"
+	protocol	"icecast2"
+	user		"source"
+	public		"no"
 }
+
+#audio_output {
+#	type		"httpd"
+#	name		"HTTP Stream"
+#	encoder		"vorbis"
+#	port		"8000"
+#	bind_to_address	"0.0.0.0"
+#	quality		"9.0"
+#	format		"44100:16:2"
+#	max_clients	"0"
+#}
 
 #audio_output_format		"44100:16:2"
 samplerate_converter		"Fastest Sinc Interpolator"
