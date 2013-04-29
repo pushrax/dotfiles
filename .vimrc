@@ -23,6 +23,8 @@ Bundle 'skammer/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
+Bundle 'tpope/vim-haml'
+Bundle 'cakebaker/scss-syntax.vim'
 
 
 " Tools
