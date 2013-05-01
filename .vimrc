@@ -80,6 +80,10 @@ set incsearch
 set nohlsearch
 
 
+" Tabs
+noremap <c-n> :tabnext<CR>
+
+
 " Indentation
 set tabstop=4
 set softtabstop=4
