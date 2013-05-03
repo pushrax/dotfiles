@@ -49,6 +49,11 @@ set titleold=
 
 set wildmenu
 
+" Just for a sanity check
+if exists('+colorcolumn')
+	set colorcolumn=80
+endif
+
 
 " Statusline
 set laststatus=2
