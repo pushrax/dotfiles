@@ -1,4 +1,5 @@
 set nocompatible
+set nomodeline
 syntax on
 filetype off
 
