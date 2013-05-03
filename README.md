@@ -8,7 +8,9 @@ Feel free to reuse any tidbits in your own configuration.
 Usage
 -----
 
-- Fork (optionally) and clone this repository.
+- Install git, GNU Make, and a C compiler (for matcher)
+- Clone the repository (after optionally forking it)
+    - If on a server, use `git clone -b servers` to prevent getting unnecessary files
 - `cd dotfiles` and `make`
 - In vim: `:BundleInstall`
 
