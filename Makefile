@@ -1,6 +1,6 @@
-all: submodules kantan-build Xresources matcher link
+all: submodules kantan-build Xresources matcher-build link
 
-matcher:
+matcher-build:
 	cd matcher; make
 
 kantan-build:
