@@ -7,3 +7,6 @@
 [submodule "kantan"]
 	path = kantan
 	url = git://github.com/pushrax/kantan.git
+[submodule "matcher"]
+	path = matcher
+	url = git://github.com/burke/matcher.git
