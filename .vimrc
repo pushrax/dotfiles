@@ -26,6 +26,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'vim-ruby/vim-ruby'
 
 
 " Tools
