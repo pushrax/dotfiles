@@ -32,6 +32,7 @@ Bundle 'vim-ruby/vim-ruby'
 " Tools
 Bundle 'tpope/vim-fugitive'
 Bundle 'jamessan/vim-gnupg'
+Bundle 'scrooloose/nerdtree'
 
 
 " Display
@@ -111,6 +112,11 @@ set ignorecase
 set smartcase
 set incsearch
 set nohlsearch
+
+Bundle 'mileszs/ack.vim'
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+set tags=./tags;/
 
 
 " Tabs
