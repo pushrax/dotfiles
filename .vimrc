@@ -45,6 +45,8 @@ endif
 set number
 set ruler
 set cursorline
+set nowrap
+set linebreak
 
 set splitright
 set splitbelow
