@@ -38,9 +38,9 @@ Bundle 'scrooloose/nerdtree'
 
 " Display
 if version < 700
-	set list listchars=tab:>\ ,trail:-
+  set list listchars=tab:>\ ,trail:-
 else
-	set list listchars=tab:▸\ ,trail:·
+  set list listchars=tab:▸\ ,trail:·
 endif
 set number
 set ruler
@@ -57,7 +57,7 @@ set wildmenu
 
 " Just for a sanity check
 if exists('+colorcolumn')
-	set colorcolumn=80
+  set colorcolumn=80
 endif
 
 
