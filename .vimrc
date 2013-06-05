@@ -20,7 +20,6 @@ colorscheme kantan
 
 " Syntax highlighting
 Bundle 'digitaltoad/vim-jade'
-Bundle 'skammer/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
