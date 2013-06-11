@@ -32,6 +32,7 @@ Bundle 'wavded/vim-stylus'
 " Tools
 Bundle 'tpope/vim-fugitive'
 Bundle 'jamessan/vim-gnupg'
+Bundle 'scrooloose/nerdtree'
 
 
 " Display
