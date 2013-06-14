@@ -29,6 +29,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wavded/vim-stylus'
 
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " Tools
 Bundle 'tpope/vim-fugitive'
@@ -132,6 +133,7 @@ set softtabstop=4
 set sw=4
 set noexpandtab
 set shiftround
+let g:indent_guides_enable_on_vim_startup=1
 
 
 " Misc fixes
