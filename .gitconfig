@@ -3,7 +3,7 @@
   email = jli.justinli@gmail.com
 
 [push]
-  default = matching
+  default = upstream
 
 [color]
   branch = auto

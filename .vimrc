@@ -35,6 +35,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/nerdtree'
+Bundle 'airblade/vim-gitgutter'
 
 
 " Display
