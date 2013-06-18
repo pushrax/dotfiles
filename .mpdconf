@@ -60,7 +60,7 @@ audio_output {
 	host		"localhost"
 	port		"8000"
 	mount		"/mpd.ogg"
-	password	"foobat12"
+	password	"c1f587e5"
 	quality		"7.0"
 	format		"44100:16:2"
 	protocol	"icecast2"
