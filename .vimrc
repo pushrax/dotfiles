@@ -68,9 +68,7 @@ endif
 set laststatus=2
 set noshowmode
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Search
 Bundle 'kien/ctrlp.vim'

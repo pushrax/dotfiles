@@ -81,13 +81,11 @@
 			{
 				"name": "line_percent",
 				"priority": 50,
-				"width": 3,
 				"align": "r"
 			},
 			{
 				"name": "line_current",
 				"draw_soft_divider": false,
-				"width": 2,
 				"align": "r"
 			},
 			{
@@ -95,7 +93,6 @@
 				"draw_soft_divider": false,
 				"priority": 20,
 				"before": ":",
-				"width": 3,
 				"align": "l"
 			}
 		]
