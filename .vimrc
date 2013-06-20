@@ -38,6 +38,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'airblade/vim-gitgutter'
 
 let g:gitgutter_enabled = 0
+nmap <silent><unique> <Leader>gg :GitGutterToggle<CR>
 
 " Display
 if version < 700
