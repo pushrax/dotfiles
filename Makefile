@@ -1,4 +1,4 @@
-all: submodules kantan-build Xresources matcher-build link
+all: submodules kantan-build Xresources matcher-build link bundleinstall
 
 matcher-build:
 	cd matcher; make
@@ -15,7 +15,10 @@ Xresources:
 	touch .mpd/mpd.{db,log,pid,state}
 
 link: .zsh .zshrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .inputrc .tmux.conf .ctags .mpd .mpdconf .xbindkeysrc .xinitrc .ncmpcpp .slate .mpv .config/powerline
-	$(foreach file, $^, ln -s $(CURDIR)/$(file) ~/`dirname "$(file)"`; )
+	-$(foreach file, $^, ln -s $(CURDIR)/$(file) ~/`dirname "$(file)"`; )
+
+bundleinstall:
+	vim +BundleInstall +qall
 
 submodules:
 	git submodule init
