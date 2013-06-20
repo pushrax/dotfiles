@@ -4,7 +4,7 @@ matcher-build:
 	cd matcher; make
 
 kantan-build:
-	cd kantan; ./kantan schemes/default
+	cd kantan; bash kantan schemes/default
 
 Xresources:
 	cat .Xresources > ~/.Xresources
@@ -14,8 +14,8 @@ Xresources:
 	mkdir -p .mpd/playlists
 	touch .mpd/mpd.{db,log,pid,state}
 
-link: .zsh .zshrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .inputrc .tmux.conf .ctags .mpd .mpdconf .xbindkeysrc .xinitrc .ncmpcpp .slate .mpv
-	$(foreach file, $^, ln -s $(CURDIR)/$(file) ~; )
+link: .zsh .zshrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .inputrc .tmux.conf .ctags .mpd .mpdconf .xbindkeysrc .xinitrc .ncmpcpp .slate .mpv .config/powerline
+	$(foreach file, $^, ln -s $(CURDIR)/$(file) ~/`dirname "$(file)"`; )
 
 submodules:
 	git submodule init

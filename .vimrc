@@ -37,6 +37,7 @@ Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/nerdtree'
 Bundle 'airblade/vim-gitgutter'
 
+let g:gitgutter_enabled = 0
 
 " Display
 if version < 700
@@ -65,17 +66,11 @@ endif
 
 " Statusline
 set laststatus=2
+set noshowmode
 
-set statusline=
-set statusline+=[%n]\ %*                        " buffer
-set statusline+=%<%F%*\                         " file path
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}/ " encoding
-set statusline+=%{&ff}]                         " file format
-set statusline+=%m%*                            " modified
-set statusline+=%=%5l%*\/%L%*                   " current/total lines
-set statusline+=%4v\ %*                         " current column
-set statusline+=0x%04B\ %*                      " selected character code
-
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " Search
 Bundle 'kien/ctrlp.vim'
@@ -144,6 +139,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey15 ctermbg=0
 " Misc fixes
 let g:netrw_home=$HOME.'/.vim'
 set backspace=2
+set timeoutlen=1000 ttimeoutlen=0
 
 
 " These need to come after all Bundle imports
