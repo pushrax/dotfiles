@@ -6,8 +6,10 @@
 		"modified_indicator": {
 			"args": { "text": "+" }
 		},
+		"readonly_indicator": {
+			"args": { "text": "readonly" }
+		},
 		"line_percent": {
-			"args": { "gradient": true },
 			"after": "%"
 		},
 		"line_current_symbol": {
