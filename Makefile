@@ -15,7 +15,8 @@ Xresources:
 	touch .mpd/mpd.{db,log,pid,state}
 
 link: .zsh .zshrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .inputrc .tmux.conf .ctags .mpd .mpdconf .xbindkeysrc .xinitrc .ncmpcpp .slate .mpv .config/powerline
-	-$(foreach file, $^, ln -s $(CURDIR)/$(file) ~/`dirname "$(file)"`; )
+	mkdir -p ~/.config
+	-$(foreach file, $^, ln -s -T $(CURDIR)/$(file) ~/$(file); )
 
 bundleinstall:
 	vim +BundleInstall +qall
