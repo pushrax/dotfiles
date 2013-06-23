@@ -19,7 +19,7 @@ log_level "default"
 gapless_mp3_playback "yes"
 #restore_paused "no"
 #save_absolute_paths_in_playlists	"no"
-metadata_to_use	"artist,album,title,track,name,genre,date,composer,performer,disc"
+metadata_to_use	"artist,album,title,track,name,genre,date,composer,performer,disc,albumartist"
 auto_update	"no"
 auto_update_depth "5"
 
