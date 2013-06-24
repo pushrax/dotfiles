@@ -13,3 +13,4 @@ bind left:cmd;alt     focus left
 bind up:cmd;alt       focus up
 bind down:cmd;alt     focus down
 
+bind e:cmd hint AOEUIDHTNSYXFBPKGMCW
