@@ -1,26 +1,25 @@
 #!/bin/sh
 
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
+RESOURCES=$HOME/.Xresources
+MODMAP=$HOME/.Xmodmap
+SYS_RESOURCES=/etc/X11/xinit/.Xresources
+SYS_MODMAP=/etc/X11/xinit/.Xmodmap
 
-# merge in defaults and keymaps
-
-if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
+## X Configs
+if [ -f "$SYS_RESOURCES" ]; then
+	xrdb -merge $SYS_RESOURCES
 fi
 
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
+if [ -f "$SYS_MODMAP" ]; then
+	xmodmap "$SYS_MODMAP"
 fi
 
-if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
+if [ -f "$RESOURCES" ]; then
+	xrdb -merge "$RESOURCES"
 fi
 
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
+if [ -f "$MODMAP" ]; then
+	xmodmap "$MODMAP"
 fi
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -29,9 +28,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 	done
 	unset f
 fi
-
-
-#nohup redshift > /dev/null &
 
 
 ## Input
@@ -43,13 +39,18 @@ xset m 0 0 # Disable mouse acceleration
 ## Audio
 export SDL_AUDIODRIVER=alsa
 
-if [ -f $HOME/.jackdrc ]; then
-	sh $HOME/.jackdrc > $HOME/.jackd.log 2>&1 &
+if [ -x $HOME/.jack.sh ]; then
+	$HOME/.jack.sh &
 fi
 
 mpd ~/.mpdconf
 mpdscribble &
 
+## Font tweaking
+INFINALITY=/etc/profile.d/infinality-settings.sh
+if [ -x $INFINALITY ]; then
+	$INFINALITY
+fi
 
 ## Start WM
 exec awesome --no-argb
