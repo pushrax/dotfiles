@@ -35,10 +35,10 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/nerdtree'
-Bundle 'airblade/vim-gitgutter'
+Bundle 'mhinz/vim-signify'
+Bundle 'Raimondi/delimitMate'
 
-let g:gitgutter_enabled = 0
-nmap <silent><unique> <Leader>gg :GitGutterToggle<CR>
+"nmap <silent><unique> <Leader>gg :GitGutterToggle<CR>
 
 " Display
 if version < 700
@@ -140,6 +140,8 @@ let g:netrw_home=$HOME.'/.vim'
 set backspace=2
 set timeoutlen=1000 ttimeoutlen=0
 
+com W w " I am a sinner
+com Wq wq
 
 " These need to come after all Bundle imports
 filetype plugin on
