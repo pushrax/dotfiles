@@ -107,6 +107,8 @@ function! GoodMatch(items, str, limit, mmode, ispath, crfile, regex)
   return split(system(cmd), "\n")
 endfunction
 
+nmap <unique> <Leader>cc :CtrlPClearAllCaches<CR>
+
 set ignorecase
 set smartcase
 set incsearch

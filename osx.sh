@@ -14,3 +14,7 @@ defaults write -g KeyRepeat -int 0
 # Kill the notification center in Mountain Lion
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
+# Animation speeds
+defaults write com.apple.dock expose-animation-duration -float 0
+
+killall Dock
