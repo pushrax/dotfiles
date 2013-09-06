@@ -28,7 +28,6 @@ Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wavded/vim-stylus'
-
 Bundle 'nathanaelkane/vim-indent-guides'
 
 " Tools
@@ -37,6 +36,7 @@ Bundle 'jamessan/vim-gnupg'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mhinz/vim-signify'
 Bundle 'Raimondi/delimitMate'
+Bundle 'tpope/vim-commentary'
 
 "nmap <silent><unique> <Leader>gg :GitGutterToggle<CR>
 

@@ -8,3 +8,6 @@ Icon?
 tags
 *.swo
 .agignore
+.Spotlight-V100
+.Trashes
+._*
