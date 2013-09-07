@@ -22,8 +22,13 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 path=(
-  $HOME/bin
+  "$HOME/bin"
   $path
+)
+
+fpath=(
+  "$ZDOTDIR"
+  $fpath
 )
 
 export LESS='-F -g -i -M -R -S -w -X -z-4'

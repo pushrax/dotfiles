@@ -57,7 +57,7 @@ zstyle ':prezto:module:pacman' frontend 'packer'
 # Prompt
 #
 
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'pushrax'
 
 #
 # SSH
