@@ -4,9 +4,6 @@ else
   echo "Missing prezto!"
 fi
 
-ZSH_THEME="pushrax"
-plugins=(git ruby node brew nyan vi-mode history-substring-search)
-
 # Prevent ESC from lagging
 KEYTIMEOUT=1
 
@@ -22,7 +19,6 @@ ID_RSA="$HOME/.ssh/id_rsa"
 if [ -r "$ID_RSA" ] && (( $+commands[keychain] )); then
 	eval `keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa`
 fi
-
 
 if [ -r "$HOME/.zlocal" ]; then
 	source "$HOME/.zlocal"
