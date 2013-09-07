@@ -1,15 +1,12 @@
 [submodule ".vim/bundle/vundle"]
 	path = .vim/bundle/vundle
 	url = git://github.com/gmarik/vundle.git
-[submodule ".zsh/oh-my-zsh"]
-	path = .zsh/oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
 [submodule "kantan"]
 	path = kantan
 	url = git://github.com/pushrax/kantan.git
 [submodule "matcher"]
 	path = matcher
 	url = git://github.com/burke/matcher.git
-[submodule ".zsh/prezto"]
-	path = .zsh/prezto
+[submodule ".zsh/.zprezto"]
+	path = .zsh/.zprezto
 	url = git@github.com:sorin-ionescu/prezto.git

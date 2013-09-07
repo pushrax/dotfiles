@@ -5,3 +5,7 @@
 
 .mpd
 .ncmpcpp/error.log
+
+.zsh/.zcompdump*
+.zsh/.zhistory
+

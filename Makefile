@@ -14,14 +14,13 @@ Xresources:
 	mkdir -p .mpd/playlists
 	touch .mpd/mpd.{db,log,pid,state}
 
-link: .zsh .zshrc .vim .vimrc .gvimrc .gitconfig .gitignore_global .inputrc .tmux.conf .ctags .mpd .mpdconf .xbindkeysrc .xinitrc .ncmpcpp .slate .mpv .config/powerline
+link: .zsh .zshenv .vim .vimrc .gvimrc .gitconfig .gitignore_global .inputrc .tmux.conf .ctags .mpd .mpdconf .xbindkeysrc .xinitrc .ncmpcpp .slate .mpv .config/powerline
 	mkdir -p ~/.config
-	-$(foreach file, $^, ln -s -T $(CURDIR)/$(file) ~/$(file); )
+	-$(foreach file, $^, ln -sT $(CURDIR)/$(file) ~/$(file); )
 
 bundleinstall:
 	vim +BundleInstall +qall
 
 submodules:
-	git submodule init
-	git submodule update
+	git submodule update --init --recursive
 
