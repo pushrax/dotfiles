@@ -35,6 +35,5 @@ Usage
 - Install git, GNU Make, and a C compiler (for matcher)
 - Clone the repository (probably after forking it)
     - If on a server, use `git clone -b servers` to prevent getting unnecessary files
-- `cd dotfiles` and `make`
-- In vim: `:BundleInstall`
+- `cd dotfiles` and `make` (this will automatically fetch submodules and install vim bundles)
 

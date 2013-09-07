@@ -14,7 +14,12 @@ Xresources:
 	mkdir -p .mpd/playlists
 	touch .mpd/mpd.{db,log,pid,state}
 
-link: .zsh .zshenv .vim .vimrc .gvimrc .gitconfig .gitignore_global .inputrc .tmux.conf .ctags .mpd .mpdconf .xbindkeysrc .xinitrc .ncmpcpp .slate .mpv .config/powerline
+link: \
+	.zsh .zshenv .vim .vimrc .gvimrc .tmux.conf \
+	.gitconfig .gitignore_global .inputrc \
+	.ctags .mpd .mpdconf .ncmpcpp .mpv \
+	.xbindkeysrc .xinitrc .slate .config/powerline
+
 	mkdir -p ~/.config
 	-$(foreach file, $^, ln -sT $(CURDIR)/$(file) ~/$(file); )
 
