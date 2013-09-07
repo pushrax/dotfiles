@@ -9,4 +9,4 @@
 	url = git://github.com/burke/matcher.git
 [submodule ".zsh/.zprezto"]
 	path = .zsh/.zprezto
-	url = git@github.com:sorin-ionescu/prezto.git
+	url = git://github.com/sorin-ionescu/prezto.git
