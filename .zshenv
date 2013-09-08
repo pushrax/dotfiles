@@ -27,11 +27,6 @@ path=(
   $path
 )
 
-fpath=(
-  "$ZDOTDIR"
-  $fpath
-)
-
 export LESS='-F -g -i -M -R -S -w -X -z-4'
 
 if [[ ! -d "$TMPDIR" ]]; then

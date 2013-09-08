@@ -7,5 +7,6 @@
 .ncmpcpp/error.log
 
 .zsh/.zcompdump*
+.zsh/.zcompcache
 .zsh/.zhistory
 
