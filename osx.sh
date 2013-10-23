@@ -18,3 +18,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.
 defaults write com.apple.dock expose-animation-duration -float 0
 
 killall Dock
+
+# Show unsigned time machine volumes
+defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1
