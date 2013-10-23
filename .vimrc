@@ -38,8 +38,6 @@ Bundle 'mhinz/vim-signify'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-commentary'
 
-"nmap <silent><unique> <Leader>gg :GitGutterToggle<CR>
-
 " Display
 if version < 700
   set list listchars=tab:>\ ,trail:-
@@ -69,7 +67,19 @@ endif
 set laststatus=2
 set noshowmode
 
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts=0
+
+let g:airline_symbols = {}
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = '+++'
+
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#tabline#enabled = 1
+Bundle 'bling/vim-airline'
 
 " Search
 Bundle 'kien/ctrlp.vim'
