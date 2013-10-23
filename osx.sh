@@ -8,13 +8,14 @@ defaults -currentHost write -globalDomain AppleFontSmoothing -int 1
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Usable key repeat settings
-defaults write -g InitialKeyRepeat -int 25
-defaults write -g KeyRepeat -int 5
+defaults write -g InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 3
 
 # Kill the notification center in Mountain Lion
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 # Animation speeds
+defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock expose-animation-duration -float 0
 
 killall Dock
