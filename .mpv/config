@@ -1,7 +1,14 @@
+msgcolor=yes
+
 vo=opengl-hq
-alang=jpn
-slang=eng
+
+alang=jp,jpn,en,eng
 volume=100
 softvol=no
+
+slang=en,eng
+embeddedfonts=yes
+ass-force-style=Kerning=yes
+
 screenshot-format=png
 
