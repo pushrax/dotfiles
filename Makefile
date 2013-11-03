@@ -7,8 +7,7 @@ kantan-build:
 	cd kantan; bash kantan schemes/default
 
 Xresources:
-	cat .Xresources > ~/.Xresources
-	cat kantan/output/Xresources >> ~/.Xresources
+	cat .Xresources kantan/output/Xresources > ~/.Xresources
 
 .mpd:
 	mkdir -p .mpd/playlists
