@@ -38,6 +38,8 @@ Bundle 'mhinz/vim-signify'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-commentary'
 
+autocmd User GnuPG set paste
+
 " Display
 if version < 700
   set list listchars=tab:>\ ,trail:-

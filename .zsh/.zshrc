@@ -29,3 +29,5 @@ if [ -r "$HOME/.zlocal" ]; then
 	source "$HOME/.zlocal"
 fi
 
+export GPG_TTY=`tty`
+
