@@ -16,7 +16,8 @@ Bundle 'gmarik/vundle'
 set t_Co=16
 set background=dark
 colorscheme kantan
-set guifont=Meslo\ LG\ S:h12
+set guifont=Terminus\ (TTF):h12
+set noantialias
 
 
 " Syntax highlighting
@@ -37,6 +38,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'mhinz/vim-signify'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-commentary'
+Bundle 'vim-scripts/AutoComplPop'
 
 autocmd User GnuPG set paste
 
@@ -160,4 +162,8 @@ com Wq wq
 " These need to come after all Bundle imports
 filetype plugin on
 filetype plugin indent on
+
+if filereadable($HOME.'/.local.vim')
+	source $HOME/.local.vim
+endif
 
