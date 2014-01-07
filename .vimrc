@@ -16,8 +16,7 @@ Bundle 'gmarik/vundle'
 set t_Co=16
 set background=dark
 colorscheme kantan
-set guifont=Terminus\ (TTF):h12
-set noantialias
+set guifont=Meslo\ LG\ S:h12
 
 
 " Syntax highlighting
