@@ -1,6 +1,5 @@
 set nocompatible
 set nomodeline
-syntax on
 filetype off
 
 set encoding=utf-8
@@ -13,13 +12,14 @@ Bundle 'gmarik/vundle'
 
 
 " Colours
+syntax on
 set t_Co=16
 set background=dark
 colorscheme kantan
 set guifont=Meslo\ LG\ S:h12
 
 
-" Syntax highlighting
+" Languages
 Bundle 'digitaltoad/vim-jade'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
@@ -29,6 +29,10 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wavded/vim-stylus'
 Bundle 'nathanaelkane/vim-indent-guides'
+
+if !empty($GOROOT)
+  set rtp+=$GOROOT/misc/vim
+endif
 
 " Tools
 Bundle 'tpope/vim-fugitive'
