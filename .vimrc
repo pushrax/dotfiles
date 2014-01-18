@@ -12,7 +12,6 @@ Bundle 'gmarik/vundle'
 
 
 " Colours
-syntax on
 set t_Co=16
 set background=dark
 colorscheme kantan
@@ -32,6 +31,8 @@ Bundle 'nathanaelkane/vim-indent-guides'
 
 if !empty($GOROOT)
   set rtp+=$GOROOT/misc/vim
+else
+  Bundle 'jnwhiteh/vim-golang'
 endif
 
 " Tools
@@ -165,6 +166,7 @@ com Wq wq
 " These need to come after all Bundle imports
 filetype plugin on
 filetype plugin indent on
+syntax on
 
 if filereadable($HOME.'/.local.vim')
 	source $HOME/.local.vim
