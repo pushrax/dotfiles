@@ -139,10 +139,12 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 set tags=./tags;/
 
 
-" Navigation remappings
+" Control
 set hidden
 noremap <c-n> :bn<CR>
 noremap <c-p> :bp<CR>
+set mouse=a
+set mousehide
 
 
 " Indentation
