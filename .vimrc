@@ -94,11 +94,12 @@ Bundle 'kien/ctrlp.vim'
 
 set wildignore+=*.o,.git,*.jpg,*.png,*.swp,*.d,*.gif,*.pyc,node_modules,*.class,*.crf,*.hg,*.orig,.meteor,*.acn,*.acr,*.alg,*.aux,*.bbl,*.blg,*.dvi,*.fdb_latexmk,*.glg,*.glo,*.gls,*.idx,*.ilg,*.ind,*.ist,*.lof,*.log,*.lot,*.maf,*.mtc,*.mtc0,*.nav,*.nlo,*.out,*.pdfsync,*.ps,*.snm,*.synctex.gz,*.toc,*.vrb,*.xdy,*.pdf,*.bcf,*.run.xml
 
+let g:ctrlp_map = '<c-t>'
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_switch_buffer = 'Et'
 let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': ['<c-t>'],
-  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ 'AcceptSelection("e")': ['<cr>'],
+  \ 'AcceptSelection("t")': ['<c-t>'],
   \ }
 let g:ctrlp_max_height = 12
 let g:path_to_matcher = "~/.vim/matcher"
@@ -138,8 +139,10 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 set tags=./tags;/
 
 
-" Tabs
-noremap <c-n> :tabnext<CR>
+" Navigation remappings
+set hidden
+noremap <c-n> :bn<CR>
+noremap <c-p> :bp<CR>
 
 
 " Indentation
