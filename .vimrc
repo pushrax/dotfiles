@@ -145,6 +145,10 @@ noremap <c-n> :bn<CR>
 noremap <c-p> :bp<CR>
 set mouse=a
 set mousehide
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
 
 
 " Indentation
@@ -158,6 +162,9 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=grey10 ctermbg=NONE
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey15 ctermbg=0
+
+vnoremap < <gv
+vnoremap > >gv
 
 
 " Misc fixes
