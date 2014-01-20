@@ -143,6 +143,7 @@ set tags=./tags;/
 set hidden
 noremap <c-n> :bn<CR>
 noremap <c-p> :bp<CR>
+nnoremap <Leader>q :bdelete<cr>
 set mouse=a
 set mousehide
 map <c-j> <c-w>j
@@ -172,15 +173,26 @@ let g:netrw_home=$HOME.'/.vim'
 set backspace=2
 set timeoutlen=1000 ttimeoutlen=0
 set history=100
-highlight clear SignColumn
 
 com W w " I am a sinner
 com Wq wq
+
+set autoread
+set scrolloff=8
+
+if exists('$TMUX')
+	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 " These need to come after all Bundle imports
 filetype plugin on
 filetype plugin indent on
 syntax on
+highlight clear SignColumn
 
 if filereadable($HOME.'/.local.vim')
 	source $HOME/.local.vim
