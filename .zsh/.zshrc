@@ -31,3 +31,14 @@ fi
 
 export GPG_TTY=`tty`
 
+function notify {
+	ret=$?
+	if [ $ret -eq 0 ]; then
+		echo -e "\033[1;32m[ DONE ]\033[0m"
+		( say -v 'Good News' "Done" & )
+	elif [ $status -ne 130 ]; then
+		echo -e "\033[1;31m[ ERROR $ret ]\033[0m"
+		( say -v Cellos "oh noes, exit code $ret" & )
+	fi
+	return $status
+}
