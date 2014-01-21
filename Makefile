@@ -1,3 +1,12 @@
+UNAME := $(shell uname)
+
+LN_FLAGS := -s
+ifeq ($(UNAME), Linux)
+	LN_FLAGS := $(LN_FLAGS) -T
+else ifeq ($(UNAME), Darwin)
+	LN_FLAGS := $(LN_FLAGS) -h
+endif
+
 all: submodules kantan-build Xresources matcher-build link bundleinstall
 
 matcher-build:
@@ -20,7 +29,7 @@ link: \
 	.xbindkeysrc .xinitrc .slate
 
 	mkdir -p ~/.config
-	-$(foreach file, $^, ln -s $(CURDIR)/$(file) ~/$(file); )
+	-$(foreach file, $^, ln $(LN_FLAGS) $(CURDIR)/$(file) ~/$(file); )
 
 bundleinstall:
 	vim +BundleInstall +qall
