@@ -22,3 +22,10 @@ killall Dock
 
 # Show unsigned time machine volumes
 defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1
+
+# Disable boot sound
+sudo nvram SystemAudioVolume=" "
+
+# Don't save to iCloud by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
