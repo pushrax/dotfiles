@@ -27,6 +27,8 @@ Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wavded/vim-stylus'
+Bundle 'petRUShka/vim-opencl'
+Bundle 'derekwyatt/vim-scala'
 Bundle 'nathanaelkane/vim-indent-guides'
 
 if !empty($GOROOT)
