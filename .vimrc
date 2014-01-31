@@ -45,6 +45,7 @@ Bundle 'mhinz/vim-signify'
 Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-commentary'
 Bundle 'vim-scripts/AutoComplPop'
+Bundle "mattn/emmet-vim"
 
 autocmd User GnuPG set paste
 
