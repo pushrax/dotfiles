@@ -136,8 +136,7 @@ set smartcase
 set incsearch
 set nohlsearch
 
-Bundle 'mileszs/ack.vim'
-let g:ackprg = 'ag --nogroup --nocolor --column'
+Bundle 'rking/ag.vim'
 
 set tags=./tags;/
 
