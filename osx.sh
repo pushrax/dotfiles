@@ -1,9 +1,6 @@
 #!/bin/sh
 # Apple tweaks
 
-# Less fat font rendering
-defaults -currentHost write -globalDomain AppleFontSmoothing -int 1
-
 # Allow typing things like "fffffffuuuuuuuuuuuu" much more easily...
 defaults write -g ApplePressAndHoldEnabled -bool false
 
