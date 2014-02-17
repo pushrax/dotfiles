@@ -175,10 +175,6 @@ let g:netrw_home=$HOME.'/.vim'
 set backspace=2
 set timeoutlen=1000 ttimeoutlen=0
 set history=100
-
-com W w " I am a sinner
-com Wq wq
-
 set autoread
 set scrolloff=8
 
