@@ -11,4 +11,5 @@ embeddedfonts=yes
 ass-force-style=Kerning=yes
 
 screenshot-format=png
+screenshot-template="~/Desktop/mpv_%n"
 
