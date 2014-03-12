@@ -31,15 +31,23 @@ follow_inside_symlinks		"yes"
 
 # Input #######################################################################
 input {
-        plugin "curl"
+	plugin "curl"
 }
 
 
 # Audio Output ################################################################
 audio_output {
 	type "jack"
-	name "JACK Device"
-	format "96000:24:2"
+	name "JACK"
+	client_name "mpd"
+	format "48000:16:2"
+}
+
+audio_output {
+	type "fifo"
+	name "fifo"
+	path "/tmp/mpd.fifo"
+	format "44100:16:2"
 }
 
 #audio_output {
@@ -55,13 +63,14 @@ audio_output {
 
 audio_output {
 	type		"shout"
-	encoding	"ogg"
+	encoding	"mp3"
 	name		"mpd stream"
 	host		"localhost"
 	port		"8000"
-	mount		"/mpd.ogg"
+	mount		"/mpd"
 	password	"c1f587e5"
-	quality		"7.0"
+	#quality		"7.0"
+	bitrate		"320"
 	format		"44100:16:2"
 	protocol	"icecast2"
 	user		"source"
