@@ -1,60 +1,60 @@
 [user]
-  name = Justin Li
-  email = jli.justinli@gmail.com
+	name = Justin Li
+	email = jli.justinli@gmail.com
 
 [push]
-  default = current
+	default = current
 
 [pull]
-  rebase = true
+	rebase = true
 
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+	branch = auto
+	diff = auto
+	status = auto
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [alias]
-  ci = commit -v
-  lg = log --graph --pretty=format:'%Cred%h%Creset %Creset%Cblue%an%Creset %s %Cgreen(%cr)%Cred%d%Creset' --abbrev-commit --date=relative
-  lga = "!git lg --all"
-  amend = commit --amend
-  gg = grep -A5 -B5 --color -n
-  cp = cherry-pick
-  co = checkout
-  f = fetch
-  ire = rebase -i
-  s = status
-  ds = diff --cached
-  dw = diff --ignore-space-change
-  pd = diff --patience
-  pr = pull --rebase
-  sync = "!f() { branch=$(git name-rev --name-only HEAD); echo Syncing $branch with master && git checkout master && git pull --ff-only && git checkout $branch && git rebase master; }; f"
-  outgoing = log origin/master..HEAD
-  incoming = "!git fetch $1; git log HEAD..$1/master"
+	ci = commit -v
+	lg = log --graph --pretty=format:'%Cred%h%Creset %Creset%Cblue%an%Creset %s %Cgreen(%cr)%Cred%d%Creset' --abbrev-commit --date=relative
+	lga = "!git lg --all"
+	amend = commit --amend
+	gg = grep -A5 -B5 --color -n
+	cp = cherry-pick
+	co = checkout
+	f = fetch
+	ire = rebase -i
+	s = status
+	ds = diff --cached
+	dw = diff --ignore-space-change
+	pd = diff --patience
+	pr = pull --rebase
+	sync = "!f() { branch=$(git name-rev --name-only HEAD); echo Syncing $branch with master && git checkout master && git pull --ff-only && git checkout $branch && git rebase master; }; f"
+	outgoing = log origin/master..HEAD
+	incoming = "!git fetch $1; git log HEAD..$1/master"
 
 [core]
-  editor = vim
-  excludesfile = ~/.gitignore_global
+	editor = vim
+	excludesfile = ~/.gitignore_global
 
 [merge]
-  tool = vimdiff
+	tool = vimdiff
 
 [diff]
-  # Use mnemonic prefixes (index, work tree, commit, object) instead of the standard a and b notation
-  mnemonicprefix = true
+	# Use mnemonic prefixes (index, work tree, commit, object) instead of the standard a and b notation
+	mnemonicprefix = true
 
-  # Detect renames as well as copies
-  renames = copies
+	# Detect renames as well as copies
+	renames = copies
 
 [difftool]
-  prompt = false
+	prompt = false
