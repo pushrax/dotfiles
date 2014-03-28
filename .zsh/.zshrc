@@ -9,6 +9,8 @@ else
   echo "Missing prezto!"
 fi
 
+source "$ZDOTDIR/z/z.sh"
+
 # Prevent ESC from lagging
 KEYTIMEOUT=1
 
