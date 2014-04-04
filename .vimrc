@@ -31,6 +31,7 @@ Bundle 'petRUShka/vim-opencl'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'smerrill/vcl-vim-plugin'
+Bundle 'wting/rust.vim'
 
 if !empty($GOROOT)
   set rtp+=$GOROOT/misc/vim
