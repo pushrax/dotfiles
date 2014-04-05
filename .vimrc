@@ -49,7 +49,11 @@ Bundle 'tpope/vim-commentary'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle "mattn/emmet-vim"
 
-autocmd User GnuPG set paste
+function SetGPGOptions()
+  set paste
+  set ts=2 sts=2 sw=2 expandtab
+endfunction
+autocmd User GnuPG call SetGPGOptions()
 
 " Display
 if version < 700
