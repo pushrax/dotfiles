@@ -12,4 +12,4 @@
 	url = git://github.com/sorin-ionescu/prezto.git
 [submodule ".zsh/z"]
 	path = .zsh/z
-	url = git@github.com:rupa/z.git
+	url = git://github.com/rupa/z.git
