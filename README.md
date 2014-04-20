@@ -9,7 +9,8 @@ Feel free to reuse any tidbits in your own configuration!
 Usage
 -----
 
-- Install git, vim, GNU Make, and a C compiler (for matcher)
+- Install git, vim (vim-nox on Debian based distros), GNU Make, and a C compiler (for matcher)
 - Clone the repository
-- `cd dotfiles` and `make` (this will automatically fetch submodules and install vim bundles)
+- `cd dotfiles` and `make`. This will automatically fetch submodules and install vim bundles.
+This is idempotent, so it can be run each time the repository is updated.
 
