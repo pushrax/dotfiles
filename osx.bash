@@ -53,4 +53,7 @@ function install {
 install tmux
 install wget
 install ag
+install mtr
+install gpg
+install htop
 
