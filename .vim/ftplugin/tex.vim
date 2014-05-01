@@ -1,3 +1,3 @@
-set nonumber
-set foldcolumn=8
+setlocal nonumber
+setlocal foldcolumn=8
 hi FoldColumn ctermbg=None
