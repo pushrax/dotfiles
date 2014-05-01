@@ -37,9 +37,20 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Homebrew
 function exists {
 	type "$1" > /dev/null 2>&1
 }
 
 exists brew || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
+function install {
+	local pkg="$2"
+	[ -z "$pkg" ] && pkg="$1"
+	exists "$1" || brew install "$pkg"
+}
+
+install tmux
+install wget
+install ag
 
