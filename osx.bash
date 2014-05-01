@@ -36,3 +36,10 @@ sudo nvram SystemAudioVolume=" "
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+function exists {
+	type "$1" > /dev/null 2>&1
+}
+
+exists brew || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
