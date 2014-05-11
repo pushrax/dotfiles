@@ -39,12 +39,10 @@ xset m 0 0 # Disable mouse acceleration
 ## Audio
 export SDL_AUDIODRIVER=alsa
 
-if [ -x $HOME/.jack.sh ]; then
-	$HOME/.jack.sh &
-fi
+# if [ -x $HOME/.jack.sh ]; then
+# 	$HOME/.jack.sh &
+# fi
 
-mpd ~/.mpdconf
-mpdscribble &
 
 ## Font tweaking
 INFINALITY=/etc/profile.d/infinality-settings.sh
