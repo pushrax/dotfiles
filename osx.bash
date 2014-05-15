@@ -11,6 +11,9 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # Turn off elastic scrolling
 defaults write NSGlobalDomain NSScrollViewRubberbanding -int 0
 
+# Enable scrollbar hiding for non-trackpads
+defaults write NSGlobalDomain AppleShowScrollBars WhenScrolling
+
 # Don't save to iCloud by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
