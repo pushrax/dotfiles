@@ -45,7 +45,7 @@ function exists {
 	type "$1" > /dev/null 2>&1
 }
 
-exists brew || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+exists brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 function install {
 	local pkg="$2"
