@@ -60,3 +60,5 @@ install mtr
 install gpg
 install htop
 
+install ccache
+install valgrind
