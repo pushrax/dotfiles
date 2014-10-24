@@ -228,7 +228,6 @@ store_lyrics_in_song_dir = "no"
 #ncmpc_like_songs_adding = "no" (enabled - add/remove, disabled - always add)
 #
 show_hidden_files_in_local_browser = "no"
-display_screens_numbers_on_start = "no"
 #
 ##
 ## How shall key_screen_switcher work?
@@ -263,11 +262,7 @@ display_screens_numbers_on_start = "no"
 #
 #ask_for_locked_screen_width_part = "yes"
 #
-startup_screen = "2"
-#
 #jump_to_now_playing_song_at_start = "yes"
-#
-ask_before_clearing_main_playlist = "no"
 #
 #clock_display_seconds = "no"
 #
