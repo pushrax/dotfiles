@@ -63,6 +63,8 @@ install ag
 install mtr
 install gpg
 install htop
+install netcat
+install nmap
 
 install ccache
 install valgrind
