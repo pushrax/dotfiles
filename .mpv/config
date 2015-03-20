@@ -1,4 +1,5 @@
 msg-color=yes
+no-border
 
 vo=opengl-hq
 
