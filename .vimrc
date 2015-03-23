@@ -33,6 +33,8 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'smerrill/vcl-vim-plugin'
 Bundle 'wting/rust.vim'
 Bundle 'fatih/vim-go'
+Bundle 'tikhomirov/vim-glsl'
+Bundle 'beyondmarc/hlsl.vim'
 
 " Tools
 Bundle 'tpope/vim-fugitive'
