@@ -11,6 +11,9 @@ fi
 
 source "$ZDOTDIR/z/z.sh"
 
+unalias 'gs'
+unalias 'gpt'
+
 # Prevent ESC from lagging
 KEYTIMEOUT=1
 
