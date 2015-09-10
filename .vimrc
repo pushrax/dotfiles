@@ -180,6 +180,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set history=100
 set autoread
 set scrolloff=8
+set viminfo=
 
 if exists('$TMUX')
 	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
