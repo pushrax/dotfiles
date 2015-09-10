@@ -3,7 +3,8 @@ set nomodeline
 filetype off
 
 set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp932,cp936,big5,euc-jp,euc-kr,gb18030,latin1,default
+set fileencodings=ucs-bom,utf-8,cp932,cp936,big5,sjis,euc-jp,euc-kr,gb18030,latin1,default
+set spelllang=en_ca
 
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
