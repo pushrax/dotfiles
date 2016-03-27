@@ -6,10 +6,9 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp932,cp936,big5,sjis,euc-jp,euc-kr,gb18030,latin1,default
 set spelllang=en_ca
 
-" Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+" Plugin loader
+source ~/.vim/plug/plug.vim
+call plug#begin('~/.vim/plugins')
 
 
 " Colours
@@ -20,38 +19,38 @@ set guifont=Meslo\ LG\ S:h12
 
 
 " Languages
-Bundle 'digitaltoad/vim-jade'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-haml'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'wavded/vim-stylus'
-Bundle 'petRUShka/vim-opencl'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'smerrill/vcl-vim-plugin'
-Bundle 'wting/rust.vim'
-Bundle 'fatih/vim-go'
-Bundle 'tikhomirov/vim-glsl'
-Bundle 'beyondmarc/hlsl.vim'
+Plug 'digitaltoad/vim-jade'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'kchmck/vim-coffee-script'
+Plug 'groenewege/vim-less'
+Plug 'tpope/vim-haml'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'wavded/vim-stylus'
+Plug 'petRUShka/vim-opencl'
+Plug 'derekwyatt/vim-scala'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'smerrill/vcl-vim-plugin'
+Plug 'wting/rust.vim'
+Plug 'fatih/vim-go'
+Plug 'tikhomirov/vim-glsl'
+Plug 'beyondmarc/hlsl.vim'
+
 
 " Tools
-Bundle 'tpope/vim-fugitive'
-Bundle 'jamessan/vim-gnupg'
-Bundle 'scrooloose/nerdtree'
-Bundle 'mhinz/vim-signify'
-Bundle 'Raimondi/delimitMate'
-Bundle 'tpope/vim-commentary'
-Bundle 'vim-scripts/AutoComplPop'
-Bundle "mattn/emmet-vim"
+Plug 'tpope/vim-fugitive'
+Plug 'jamessan/vim-gnupg'
+Plug 'scrooloose/nerdtree'
+Plug 'mhinz/vim-signify'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-commentary'
 
 function SetGPGOptions()
   set paste
   set ts=2 sts=2 sw=2 expandtab
 endfunction
 autocmd User GnuPG call SetGPGOptions()
+
 
 " Display
 if version < 700
@@ -94,55 +93,24 @@ let g:airline_symbols.paste = '+++'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#tabline#enabled = 1
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 
 " Search
-Bundle 'kien/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'junegunn/fzf', {'dir': '~/dotfiles/fzf/'}
+Plug 'Valloric/YouCompleteMe'
 
-set wildignore+=*.o,.git,*.jpg,*.png,*.swp,*.d,*.gif,*.pyc,node_modules,*.class,*.crf,*.hg,*.orig,.meteor,*.acn,*.acr,*.alg,*.aux,*.bbl,*.blg,*.dvi,*.fdb_latexmk,*.glg,*.glo,*.gls,*.idx,*.ilg,*.ind,*.ist,*.lof,*.log,*.lot,*.maf,*.mtc,*.mtc0,*.nav,*.nlo,*.out,*.pdfsync,*.ps,*.snm,*.synctex.gz,*.toc,*.vrb,*.xdy,*.pdf,*.bcf,*.run.xml
-
-let g:ctrlp_map = '<c-t>'
-let g:ctrlp_clear_cache_on_exit = 1
-let g:ctrlp_switch_buffer = 'Et'
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': ['<cr>'],
-  \ 'AcceptSelection("t")': ['<c-t>'],
-  \ }
-let g:ctrlp_max_height = 12
-let g:path_to_matcher = "~/.vim/matcher"
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
-let g:ctrlp_match_func = { 'match': 'GoodMatch' }
-
-function! GoodMatch(items, str, limit, mmode, ispath, crfile, regex)
-  " create cache
-  let cachefile = ctrlp#utils#cachedir().'/matcher.cache'
-  if !( filereadable(cachefile) && a:items == readfile(cachefile) )
-    call writefile(a:items, cachefile)
-  endif
-  if !filereadable(cachefile)
-    return []
-  endif
-
-  " a:mmode is ignored
-  let cmd = g:path_to_matcher.' --limit '.a:limit.' --manifest '.cachefile.' '
-  if !( exists('g:ctrlp_dotfiles') && g:ctrlp_dotfiles )
-    let cmd = cmd.'--no-dotfiles '
-  endif
-  let cmd = cmd.a:str
-
-  return split(system(cmd), "\n")
-endfunction
-
-nmap <unique> <Leader>cc :CtrlPClearAllCaches<CR>
+noremap <silent> <C-T> :FZF<CR>
+nnoremap <Leader>jd :YcmCompleter GoTo<CR>
+nnoremap <Leader>jf :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>ji :YcmCompleter GoToInclude<CR>
 
 set ignorecase
 set smartcase
 set incsearch
 set nohlsearch
-
-Bundle 'rking/ag.vim'
-
 set tags=./tags;/
 
 
@@ -175,7 +143,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 
-" Misc fixes
+" Misc tweaks
 let g:netrw_home=$HOME.'/.vim'
 set backspace=2
 set timeoutlen=1000 ttimeoutlen=0
@@ -192,7 +160,10 @@ else
 	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" These need to come after all Bundle imports
+call plug#end()
+
+
+" These need to come after all plugin imports
 filetype plugin on
 filetype plugin indent on
 syntax on

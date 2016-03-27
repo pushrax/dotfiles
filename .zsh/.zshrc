@@ -47,3 +47,5 @@ function notify {
 	fi
 	return $status
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

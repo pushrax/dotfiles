@@ -13,3 +13,9 @@
 [submodule ".zsh/z"]
 	path = .zsh/z
 	url = git://github.com/rupa/z.git
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule ".vim/plug"]
+	path = .vim/plug
+	url = https://github.com/junegunn/vim-plug.git

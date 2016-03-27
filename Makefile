@@ -7,10 +7,10 @@ else ifeq ($(UNAME), Darwin)
 	LN_FLAGS := $(LN_FLAGS) -h
 endif
 
-all: submodules kantan-build Xresources matcher-build link bundleinstall
+all: submodules kantan-build Xresources fzf-setup link pluginstall
 
-matcher-build:
-	cd matcher; make
+fzf-setup:
+	./fzf/install --bin
 
 kantan-build:
 	cd kantan; bash kantan schemes/default
@@ -31,8 +31,9 @@ link: \
 	mkdir -p ~/.config
 	-$(foreach file, $^, ln $(LN_FLAGS) $(CURDIR)/$(file) ~/$(file); )
 
-bundleinstall:
-	vim +BundleInstall +qall
+pluginstall:
+	mkdir -p .vim/plugins
+	vim +PlugInstall +qall
 
 submodules:
 	git submodule update --init --recursive

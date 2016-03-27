@@ -1,6 +1,4 @@
-.vim/bundle/*
-!.vim/bundle/vundle
-
+.vim/plugins/*
 .vim/.netrwhist
 
 .mpd
