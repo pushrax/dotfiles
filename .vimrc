@@ -6,7 +6,6 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp932,cp936,big5,sjis,euc-jp,euc-kr,gb18030,latin1,default
 set spelllang=en_ca
 
-" Plugin loader
 source ~/.vim/plug/plug.vim
 call plug#begin('~/.vim/plugins')
 
@@ -99,13 +98,18 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Search
 Plug 'rking/ag.vim'
-Plug 'junegunn/fzf', {'dir': '~/dotfiles/fzf/'}
-Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
 
+Plug 'junegunn/fzf', {'dir': '~/dotfiles/fzf/'}
 noremap <silent> <C-T> :FZF<CR>
-nnoremap <Leader>jd :YcmCompleter GoTo<CR>
-nnoremap <Leader>jf :YcmCompleter GoToDeclaration<CR>
-nnoremap <Leader>ji :YcmCompleter GoToInclude<CR>
+
+if g:use_light_conf
+  Plug 'vim-scripts/AutoComplPop'
+else
+  Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+  nnoremap <Leader>jd :YcmCompleter GoTo<CR>
+  nnoremap <Leader>jf :YcmCompleter GoToDeclaration<CR>
+  nnoremap <Leader>ji :YcmCompleter GoToInclude<CR>
+endif
 
 set ignorecase
 set smartcase
