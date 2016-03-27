@@ -100,7 +100,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Search
 Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', {'dir': '~/dotfiles/fzf/'}
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
 
 noremap <silent> <C-T> :FZF<CR>
 nnoremap <Leader>jd :YcmCompleter GoTo<CR>

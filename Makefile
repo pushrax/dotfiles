@@ -36,5 +36,6 @@ pluginstall:
 	vim +PlugInstall +qall
 
 submodules:
+	git submodule sync
 	git submodule update --init --recursive
 
