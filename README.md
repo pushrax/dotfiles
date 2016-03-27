@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-My collection of unix dotfiles used across my computers.
+Configuration I use across \*nix computers.
 Repository structure inspired by [Jamie Wong's dotfiles](https://github.com/phleet/dotfiles/).
 Feel free to reuse any tidbits in your own configuration!
 

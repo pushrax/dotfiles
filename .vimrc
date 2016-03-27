@@ -101,6 +101,7 @@ Plug 'rking/ag.vim'
 
 Plug 'junegunn/fzf', {'dir': '~/dotfiles/fzf/'}
 noremap <silent> <C-T> :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g .'
 
 if g:use_light_conf
   Plug 'vim-scripts/AutoComplPop'
