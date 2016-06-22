@@ -74,9 +74,7 @@ zstyle ':prezto:module:prompt' theme 'pushrax'
 zstyle ':prezto:module:syntax-highlighting' highlighters \
   'main' \
   'brackets' \
-  'pattern' \
-  'cursor' \
-  'root'
+  'pattern'
 
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
