@@ -1,16 +1,32 @@
 msg-color=yes
 no-border
+term-osd-bar
+keep-open
+autofit-larger=100%x95%
+cursor-autohide=1000
 
-vo=opengl-hq
+# Video
+
+vo=opengl
+deinterlace=auto
+
+# Audio
 
 alang=jp,jpn,en,eng
 volume=100
-softvol=no
 
-slang=en,eng
+# Text
+
+slang=en,eng,enm
 embeddedfonts=yes
-ass-force-style=Kerning=yes
+demuxer-mkv-subtitle-preroll
+sub-ass-force-style=Kerning=yes
+sub-auto=fuzzy
+sub-use-margins
+sub-ass-force-margins
+
+# Screenshots
 
 screenshot-format=png
-screenshot-template="~/Desktop/mpv_%n"
+screenshot-template="~/Desktop/%F (%P) %n"
 
