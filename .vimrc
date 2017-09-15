@@ -35,6 +35,7 @@ Plug 'fatih/vim-go'
 Plug 'tikhomirov/vim-glsl'
 Plug 'beyondmarc/hlsl.vim'
 
+let g:go_def_mapping_enabled = 0
 
 " Tools
 Plug 'tpope/vim-fugitive'
@@ -132,6 +133,8 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 map <Space> <Leader>
 
+Plug 'christoomey/vim-tmux-navigator'
+
 
 " Indentation
 set tabstop=4
@@ -157,6 +160,8 @@ set history=100
 set autoread
 set scrolloff=8
 set viminfo=
+
+nnoremap <Leader>cf :let @+ = expand("%")<CR>
 
 if exists('$TMUX')
 	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
