@@ -48,4 +48,8 @@ function notify {
 	return $status
 }
 
+function ag-replace {
+	ag "$1" --files-with-matches | xargs perl -pi -e "s/$1/$2/g"
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
