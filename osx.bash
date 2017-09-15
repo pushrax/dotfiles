@@ -58,6 +58,7 @@ function install {
 }
 
 install tmux
+install reattach-to-user-namespace
 install wget
 install ag
 install mtr
@@ -65,6 +66,4 @@ install gpg
 install htop
 install netcat
 install nmap
-
 install ccache
-install valgrind
