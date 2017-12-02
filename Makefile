@@ -25,7 +25,7 @@ Xresources:
 	@touch .mpd/mpd.{db,log,pid,state}
 
 link: \
-	.zsh .zshenv .vim .gvimrc .tmux.conf .tmux-osx.conf \
+	.zsh .zshenv .vim .gvimrc .tmux .tmux.conf .tmux-osx.conf \
 	.gitconfig .gitignore_global .inputrc \
 	.ctags .mpd .mpdconf .ncmpcpp .mpv \
 	.xbindkeysrc .xinitrc .slate

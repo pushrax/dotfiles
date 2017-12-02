@@ -1,6 +1,8 @@
 .vim/plugins/*
 .vim/.netrwhist
 
+.tmux/plugins/*
+
 .mpd
 .ncmpcpp/error.log
 
