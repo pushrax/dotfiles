@@ -52,4 +52,8 @@ function ag-replace {
 	ag "$1" --files-with-matches | xargs perl -pi -e "s/$1/$2/g"
 }
 
+function rg-replace {
+	rg "$1" --files-with-matches | xargs perl -pi -e "s/$1/$2/g"
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -67,3 +67,5 @@ install htop
 install netcat
 install nmap
 install ccache
+exists rg || brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
+install rg burntsushi/ripgrep/ripgrep-bin

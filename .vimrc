@@ -39,6 +39,7 @@ let g:go_def_mapping_enabled = 0
 
 " Tools
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'jamessan/vim-gnupg'
 Plug 'scrooloose/nerdtree'
 Plug 'mhinz/vim-signify'
@@ -102,7 +103,7 @@ Plug 'rking/ag.vim'
 
 Plug 'junegunn/fzf', {'dir': '~/dotfiles/fzf/'}
 noremap <silent> <C-T> :FZF<CR>
-let $FZF_DEFAULT_COMMAND = 'ag -g .'
+let $FZF_DEFAULT_COMMAND = 'rg --files'
 
 if g:use_light_conf
   Plug 'vim-scripts/AutoComplPop'
@@ -124,7 +125,10 @@ set tags=./tags;/
 set hidden
 noremap <c-n> :bn<CR>
 noremap <c-p> :bp<CR>
+noremap <Leader>y "+y
+noremap <Leader>p "+p
 nnoremap <Leader>q :bdelete<cr>
+nnoremap <Leader>n :new<cr>
 set mouse=a
 set mousehide
 map <c-j> <c-w>j
