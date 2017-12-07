@@ -30,12 +30,15 @@ Plug 'petRUShka/vim-opencl'
 Plug 'derekwyatt/vim-scala'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'smerrill/vcl-vim-plugin'
-Plug 'wting/rust.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go'
 Plug 'tikhomirov/vim-glsl'
 Plug 'beyondmarc/hlsl.vim'
 
 let g:go_def_mapping_enabled = 0
+
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
 
 " Tools
 Plug 'tpope/vim-fugitive'
