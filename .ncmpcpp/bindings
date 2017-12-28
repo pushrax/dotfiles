@@ -16,10 +16,10 @@ def_key "j"
 #def_key "}"
 #  scroll_down_artist
 
-def_key "ctrl_u"
+def_key "ctrl-u"
   page_up
 
-def_key "ctrl_d"
+def_key "ctrl-d"
   page_down
 
 #def_key "home"
@@ -127,10 +127,10 @@ def_key "c"
 #def_key "<"
 #  previous
 #
-#def_key "ctrl_h"
+#def_key "ctrl-h"
 #  jump_to_parent_directory
 #
-#def_key "ctrl_h"
+#def_key "ctrl-h"
 #  replay_song
 #
 #def_key "backspace"
@@ -196,13 +196,13 @@ def_key "c"
 #def_key "u"
 #  update_database
 #
-#def_key "ctrl_v"
+#def_key "ctrl-v"
 #  sort_playlist
 #
-#def_key "ctrl_r"
+#def_key "ctrl-r"
 #  reverse_playlist
 #
-#def_key "ctrl_f"
+#def_key "ctrl-f"
 #  apply_filter
 #
 #def_key "/"
@@ -262,7 +262,7 @@ def_key "v"
 def_key "V"
   remove_selection
 
-def_key "ctrl_a"
+def_key "ctrl-a"
   select_album
 
 def_key "a"
@@ -340,7 +340,7 @@ def_key "C"
 #def_key "F"
 #  toggle_fetching_lyrics_in_background
 #
-#def_key "ctrl_l"
+#def_key "ctrl-l"
 #  toggle_screen_lock
 #
 #def_key "`"
@@ -355,7 +355,7 @@ def_key "C"
 #def_key "`"
 #  add_random_items
 #
-#def_key "ctrl_p"
+#def_key "ctrl-p"
 #  set_selected_items_priority
 #
 #def_key "q"
