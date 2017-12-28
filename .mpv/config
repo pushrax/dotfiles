@@ -8,7 +8,6 @@ cursor-autohide=1000
 # Video
 
 vo=opengl
-deinterlace=auto
 
 # Audio
 
