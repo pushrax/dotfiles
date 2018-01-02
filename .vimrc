@@ -167,6 +167,7 @@ set history=100
 set autoread
 set scrolloff=8
 set viminfo=
+set nojoinspaces
 
 nnoremap <Leader>cf :let @+ = expand("%")<CR>
 
