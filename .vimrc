@@ -48,6 +48,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'mhinz/vim-signify'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-commentary'
+Plug 'qpkorr/vim-bufkill'
 
 function SetGPGOptions()
   set paste
