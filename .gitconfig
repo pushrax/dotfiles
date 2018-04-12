@@ -43,6 +43,7 @@
 	incoming = "!git fetch $1; git log HEAD..$1/master"
 	track = "!f() { branch=$(git name-rev --name-only HEAD); git branch --set-upstream-to=$1/$branch $branch; }; f"
 	bm = "!f() { git checkout -b $1 origin/master; }; f"
+	follow = "!f() { git log --topo-order -u -L $2,${3:-$2}:$1; }; f"
 
 [core]
 	editor = vim
