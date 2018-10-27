@@ -1,3 +1,10 @@
+if [[ "$PROFILE_ZSH_STARTUP" == true ]]; then
+	# http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+	PS4=$'%D{%M%S%.} %N:%i> '
+	exec 3>&2 2>$HOME/tmp/startlog.$$
+	setopt xtrace prompt_subst
+fi
+
 fpath=(
   "$ZDOTDIR/functions"
   $fpath
@@ -10,9 +17,6 @@ else
 fi
 
 source "$ZDOTDIR/z/z.sh"
-
-unalias 'gs'
-unalias 'gpt'
 
 # Prevent ESC from lagging
 KEYTIMEOUT=1
@@ -57,3 +61,10 @@ function rg-replace {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source "$ZDOTDIR/aliases.zsh"
+
+if [[ "$PROFILE_ZSH_STARTUP" == true ]]; then
+	unsetopt xtrace
+	exec 2>&3 3>&-
+fi
