@@ -58,6 +58,7 @@
 
 	# Detect renames as well as copies
 	renames = copies
+	algorithm = patience
 
 [difftool]
 	prompt = false
