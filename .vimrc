@@ -34,6 +34,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go'
 Plug 'tikhomirov/vim-glsl'
 Plug 'beyondmarc/hlsl.vim'
+Plug 'jparise/vim-graphql'
 
 let g:go_def_mapping_enabled = 0
 
@@ -107,7 +108,8 @@ Plug 'rking/ag.vim'
 
 Plug 'junegunn/fzf', {'dir': '~/dotfiles/fzf/'}
 noremap <silent> <C-T> :FZF<CR>
-let $FZF_DEFAULT_COMMAND = 'rg --files'
+let $FZF_DEFAULT_COMMAND = "rg --files"
+let $FZF_DEFAULT_OPTS = "--preview 'head -100 {}'"
 
 if g:use_light_conf
   Plug 'vim-scripts/AutoComplPop'
