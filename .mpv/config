@@ -7,7 +7,7 @@ cursor-autohide=1000
 
 # Video
 
-vo=opengl
+vo=gpu
 
 # Audio
 
