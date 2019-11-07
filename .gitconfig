@@ -44,10 +44,17 @@
 	track = "!f() { branch=$(git name-rev --name-only HEAD); git branch --set-upstream-to=$1/$branch $branch; }; f"
 	bm = "!f() { git checkout -b $1 origin/master; }; f"
 	follow = "!f() { git log --topo-order -u -L $2,${3:-$2}:$1; }; f"
+	chbranch = "!f() { git branch | fzf | xargs git checkout; }; f"
+	stashpull = "!f() { git stash && git pull; git stash pop; }; f"
+	sp = stashpull
+	wip = commit -am wip
+	mwt = "!f() { git worktree add $(pwd)-worktree-master master }; f"
+	rmwt = "!f() { git worktree remove $(pwd)-worktree-master; }; f"
 
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	commitGraph = true
 
 [merge]
 	tool = vimdiff
@@ -67,3 +74,9 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[protocol]
+	version = 2
+[credential]
+	helper = osxkeychain
+[gc]
+	writeCommitGraph = true
