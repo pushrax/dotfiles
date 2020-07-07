@@ -28,7 +28,7 @@ link: \
 	.zsh .zshenv .vim .gvimrc .tmux .tmux.conf .tmux-osx.conf \
 	.gitconfig .gitignore_global .inputrc \
 	.ctags .mpd .mpdconf .ncmpcpp .mpv \
-	.xbindkeysrc .xinitrc .slate
+	.xbindkeysrc .xinitrc .slate .config/alacritty
 
 	@mkdir -p ~/.config
 	@$(foreach file, $^, rm -f ~/$(file); )
