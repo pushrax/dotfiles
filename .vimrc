@@ -10,7 +10,7 @@ source ~/.vim/plug/plug.vim
 call plug#begin('~/.vim/plugins')
 
 
-" Colours
+" Style
 set t_Co=16
 set background=dark
 colorscheme kantan
@@ -35,6 +35,16 @@ Plug 'fatih/vim-go'
 Plug 'tikhomirov/vim-glsl'
 Plug 'beyondmarc/hlsl.vim'
 Plug 'jparise/vim-graphql'
+Plug 'joker1007/vim-ruby-heredoc-syntax'
+
+let g:ruby_heredoc_syntax_filetypes = {
+\  "ruby" : {
+\    "start" : "RUBY",
+\  },
+\  "graphql" : {
+\    "start" : "GRAPHQL",
+\  },
+\}
 
 let g:go_def_mapping_enabled = 0
 
@@ -42,14 +52,16 @@ autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
 autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
 
 " Tools
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'jamessan/vim-gnupg'
 Plug 'scrooloose/nerdtree'
 Plug 'mhinz/vim-signify'
 Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-commentary'
 Plug 'qpkorr/vim-bufkill'
+Plug 'AndrewRadev/splitjoin.vim'
 
 function SetGPGOptions()
   set paste
@@ -104,12 +116,22 @@ Plug 'vim-airline/vim-airline-themes'
 
 
 " Search
-Plug 'rking/ag.vim'
+nnoremap <Leader>f :grep! 
+
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+  let g:ackprg = 'rg --vimgrep'
+elseif executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+Plug 'mileszs/ack.vim'
 
 Plug 'junegunn/fzf', {'dir': '~/dotfiles/fzf/'}
 noremap <silent> <C-T> :FZF<CR>
 let $FZF_DEFAULT_COMMAND = "rg --files"
-let $FZF_DEFAULT_OPTS = "--preview 'head -100 {}'"
 
 if g:use_light_conf
   Plug 'vim-scripts/AutoComplPop'
@@ -129,11 +151,12 @@ set tags=./tags;/
 
 " Control
 set hidden
+command Bd bp | sp | bn | bd
 noremap <c-n> :bn<CR>
 noremap <c-p> :bp<CR>
 noremap <Leader>y "+y
 noremap <Leader>p "+p
-nnoremap <Leader>q :bdelete<cr>
+nnoremap <Leader>q :bd<cr>
 nnoremap <Leader>n :new<cr>
 set mouse=a
 set mousehide
@@ -173,6 +196,7 @@ set viminfo=
 set nojoinspaces
 
 nnoremap <Leader>cf :let @+ = expand("%")<CR>
+inoremap <C-C> <Esc>
 
 if !has('nvim')
 	if exists('$TMUX')
