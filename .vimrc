@@ -45,7 +45,7 @@ let g:ruby_heredoc_syntax_filetypes = {
 \    "start" : "GRAPHQL",
 \  },
 \}
-
+let g:ruby_indent_assignment_style = 'variable'
 let g:go_def_mapping_enabled = 0
 
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
